@@ -1,0 +1,54 @@
+services:
+  backend:
+    image: elixir:1.19.5
+    working_dir: /app/backend
+    volumes:
+      - ./:/app
+      - backend_deps:/app/backend/deps
+      - backend_build:/app/backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
+  frontend:
+    image: node:22
+    working_dir: /app/frontend
+    volumes:
+      - ./:/app
+      - frontend_node_modules:/app/frontend/node_modules
+    command: >
+      sh -lc "npm install &&
+      npm run dev -- --host 0.0.0.0 --port 5173"
+    ports:
+      - "5173:5173"
+
+  backend_test:
+    image: elixir:1.19.5
+    working_dir: /app/backend
+    volumes:
+      - ./:/app
+      - backend_deps:/app/backend/deps
+      - backend_build:/app/backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
+  frontend_test:
+    image: node:22
+    working_dir: /app/frontend
+    volumes:
+      - ./:/app
+      - frontend_node_modules:/app/frontend/node_modules
+    command: >
+      sh -lc "npm ci && npm run build"
+    profiles: ["test"]
+
+volumes:
+  backend_deps:
+  backend_build:
+  frontend_node_modules:
