@@ -2,21 +2,14 @@
 
 ## Scope
 
-Single repository intended to hold:
+Monorepo containing 10 independent learning projects.
 
-- frontend application
-- backend application
+## Structure
 
-## Current State
+- `projects/` - all project folders
+- `projects/project-XX-short-name/` - one project per folder
+- `docs/` - shared documentation
 
-Containerized split is in place:
+## Current Project
 
-- backend Elixir workspace
-- frontend workspace
-- docker-compose orchestration
-
-## Target Structure
-
-- `frontend/` - UI application
-- `backend/` - API/service application
-- `docs/` - project documentation
+- `project-01-cli-task-utility` (Elixir terminal app)

@@ -7,3 +7,7 @@ Follow RTK command usage rules from:
 Project operating rules are documented in:
 
 `docs/WORKING_RULES.md`
+
+Mandatory repository rule:
+
+- each project must be placed in its own folder under `projects/`

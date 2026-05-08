@@ -1,14 +1,10 @@
 # Roadmap
 
-## Phase 1
+## Repository Plan
 
-- establish frontend and backend base structure
+1. Project 01: CLI Task Utility
+2. Projects 02-10: each in separate `projects/project-XX-*` folder
 
-## Phase 2
+## CI Plan
 
-- implement core backend API
-- integrate frontend with backend API
-
-## Phase 3
-
-- run full test suite and release hardening
+- each project gets isolated CI execution by folder change detection

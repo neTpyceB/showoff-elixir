@@ -1,10 +1,5 @@
 # API
 
-## Current State
+No shared repository-level API.
 
-No API endpoints are implemented yet.
-
-## Planned Base
-
-- HTTP JSON API served by backend application
-- endpoint definitions to be added with implementation
+Any API definitions belong inside their project folder.

@@ -1,28 +1,34 @@
 # showoff-elixir
 
-Local: Docker-only. CI: native GitHub runners.
+Monorepo for 10 learning projects.
 
-## Start Dev (Hot Reload)
+## Project Layout Rule
+
+All projects must live in their own folder under `projects/`.
+
+Example:
+
+- `projects/project-01-cli-task-utility`
+- `projects/project-02-...`
+- ... up to project 10
+
+## Local Run (Docker-only)
 
 ```bash
-docker compose --profile dev up
+docker compose up -d
 ```
 
-- frontend dev server: [http://localhost:5173](http://localhost:5173)
-- backend watch mode: test watcher in container
-
-## Run Checks
+## Local Tests (Docker-only)
 
 ```bash
-docker compose --profile test run --rm backend_test
-docker compose --profile test run --rm frontend_test
+docker compose --profile test run --rm project01_test
 ```
 
-## CI
+## CI Rule
 
-- No Docker in CI.
-- Backend CI runs directly with Elixir/OTP on runner.
-- Frontend CI runs directly with Node on runner.
+- CI runs natively on GitHub runners.
+- CI runs only for changed project folders.
+- Current configured project CI: `project-01-cli-task-utility`.
 
 ## Docs
 
