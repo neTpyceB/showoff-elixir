@@ -3,7 +3,8 @@
 ## Repository Plan
 
 1. Project 01: CLI Task Utility
-2. Projects 02-10: each in separate `projects/project-XX-*` folder
+2. Project 02: Concurrent Web Scraper
+3. Projects 03-10: each in separate `projects/project-XX-*` folder
 
 ## CI Plan
 

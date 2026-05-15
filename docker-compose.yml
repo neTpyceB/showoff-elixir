@@ -12,6 +12,19 @@ services:
       mix deps.get &&
       mix test.watch"
 
+  project02:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-02-concurrent-web-scraper
+    volumes:
+      - ./:/app
+      - project02_deps:/app/projects/project-02-concurrent-web-scraper/deps
+      - project02_build:/app/projects/project-02-concurrent-web-scraper/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -26,6 +39,22 @@ services:
       mix test"
     profiles: ["test"]
 
+  project02_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-02-concurrent-web-scraper
+    volumes:
+      - ./:/app
+      - project02_deps:/app/projects/project-02-concurrent-web-scraper/deps
+      - project02_build:/app/projects/project-02-concurrent-web-scraper/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
+  project02_deps:
+  project02_build:

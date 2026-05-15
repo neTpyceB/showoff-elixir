@@ -9,8 +9,11 @@ All projects must live in their own folder under `projects/`.
 Example:
 
 - `projects/project-01-cli-task-utility`
-- `projects/project-02-...`
+- `projects/project-02-concurrent-web-scraper`
+- `projects/project-03-...`
 - ... up to project 10
+
+When creating a new project, existing project folders are not modified unless explicitly requested.
 
 ## Local Run (Docker-only)
 
@@ -22,13 +25,15 @@ docker compose up -d
 
 ```bash
 docker compose --profile test run --rm project01_test
+docker compose --profile test run --rm project02_test
 ```
 
 ## CI Rule
 
 - CI runs natively on GitHub runners.
+- CI triggers on push only.
 - CI runs only for changed project folders.
-- Current configured project CI: `project-01-cli-task-utility`.
+- Current configured project CI: `project-01-cli-task-utility`, `project-02-concurrent-web-scraper`.
 
 ## Docs
 
