@@ -1,3 +1,5 @@
 .idea
 projects/project-01-cli-task-utility/_build
 projects/project-01-cli-task-utility/deps
+projects/project-02-concurrent-web-scraper/_build
+projects/project-02-concurrent-web-scraper/deps

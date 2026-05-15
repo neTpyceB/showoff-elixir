@@ -22,6 +22,11 @@
 - `projects/project-01-cli-task-utility/lib/task_cli/store.ex` - file persistence
 - `projects/project-01-cli-task-utility/test/task_cli_test.exs` - domain tests
 - `projects/project-01-cli-task-utility/test/task_cli_cli_test.exs` - CLI flow tests
+- `projects/project-02-concurrent-web-scraper` - Project 2 concurrent scraper CLI
+- `projects/project-02-concurrent-web-scraper/lib/concurrent_web_scraper.ex` - concurrent fetch + aggregation
+- `projects/project-02-concurrent-web-scraper/lib/concurrent_web_scraper/cli.ex` - CLI parsing and output
+- `projects/project-02-concurrent-web-scraper/test/concurrent_web_scraper_test.exs` - concurrency + timeout tests
+- `projects/project-02-concurrent-web-scraper/test/concurrent_web_scraper_cli_test.exs` - CLI tests
 
 ## CI
 

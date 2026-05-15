@@ -6,6 +6,7 @@
 - Folder naming format: `project-XX-short-name`.
 - Each project folder is self-contained.
 - No shared runtime code across projects unless explicitly required.
+- When creating a new project, do not modify existing project folders unless explicitly requested.
 
 ## Local Setup Rules
 
@@ -23,6 +24,7 @@ After each update for a project:
 ## CI Rules
 
 - CI runs natively on GitHub runners (no Docker in CI).
+- Trigger CI on push only.
 - Cancel previous in-progress runs.
 - Run project jobs in parallel when possible.
 - Run CI only for changed project folder(s).
