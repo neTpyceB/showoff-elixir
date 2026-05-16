@@ -14,3 +14,4 @@ Monorepo containing 10 independent learning projects.
 
 - `project-01-cli-task-utility` (Elixir terminal app)
 - `project-02-concurrent-web-scraper` (Elixir concurrent terminal app)
+- `project-03-realtime-chat-server` (Phoenix websocket app)

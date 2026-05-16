@@ -1,0 +1,50 @@
+<Layouts.flash_group flash={@flash} />
+
+<main id="chat-app" class="mx-auto max-w-4xl p-6 space-y-6">
+  <header class="space-y-2">
+    <h1 class="text-3xl font-bold">Realtime Chat Server</h1>
+    <p class="text-sm text-base-content/70">
+      Phoenix Channels + WebSockets: rooms, live users, instant messages.
+    </p>
+  </header>
+
+  <section class="grid gap-4 sm:grid-cols-3">
+    <label class="form-control">
+      <span class="label-text">Name</span>
+      <input id="chat-name" class="input input-bordered" value="guest" />
+    </label>
+    <label class="form-control">
+      <span class="label-text">Room</span>
+      <input id="chat-room" class="input input-bordered" value="lobby" />
+    </label>
+    <div class="form-control justify-end">
+      <button id="chat-connect" class="btn btn-primary mt-6">Connect</button>
+    </div>
+  </section>
+
+  <section class="grid gap-4 lg:grid-cols-3">
+    <div class="card bg-base-200 lg:col-span-2">
+      <div class="card-body">
+        <h2 class="card-title text-lg">Messages</h2>
+        <div id="chat-messages" class="h-80 overflow-y-auto rounded-lg bg-base-100 p-3 text-sm">
+        </div>
+        <form id="chat-form" class="join w-full">
+          <input
+            id="chat-input"
+            class="input input-bordered join-item w-full"
+            placeholder="Type a message"
+          />
+          <button class="btn btn-secondary join-item" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="card bg-base-200">
+      <div class="card-body">
+        <h2 class="card-title text-lg">Live Users</h2>
+        <p id="chat-status" class="text-sm text-base-content/70">Not connected</p>
+        <ul id="chat-users" class="list-disc pl-4 text-sm"></ul>
+      </div>
+    </div>
+  </section>
+</main>
