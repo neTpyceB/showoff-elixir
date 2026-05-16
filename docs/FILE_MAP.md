@@ -27,6 +27,11 @@
 - `projects/project-02-concurrent-web-scraper/lib/concurrent_web_scraper/cli.ex` - CLI parsing and output
 - `projects/project-02-concurrent-web-scraper/test/concurrent_web_scraper_test.exs` - concurrency + timeout tests
 - `projects/project-02-concurrent-web-scraper/test/concurrent_web_scraper_cli_test.exs` - CLI tests
+- `projects/project-03-realtime-chat-server` - Project 3 Phoenix realtime chat server
+- `projects/project-03-realtime-chat-server/lib/realtime_chat_server_web/channels/room_channel.ex` - room message handling
+- `projects/project-03-realtime-chat-server/lib/realtime_chat_server_web/presence.ex` - live users tracking
+- `projects/project-03-realtime-chat-server/lib/realtime_chat_server_web/user_socket.ex` - websocket client socket
+- `projects/project-03-realtime-chat-server/test/realtime_chat_server_web/channels/room_channel_test.exs` - channel behavior tests
 
 ## CI
 
