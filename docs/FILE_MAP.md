@@ -32,6 +32,11 @@
 - `projects/project-03-realtime-chat-server/lib/realtime_chat_server_web/presence.ex` - live users tracking
 - `projects/project-03-realtime-chat-server/lib/realtime_chat_server_web/user_socket.ex` - websocket client socket
 - `projects/project-03-realtime-chat-server/test/realtime_chat_server_web/channels/room_channel_test.exs` - channel behavior tests
+- `projects/project-04-live-dashboard-system` - Project 4 LiveView realtime dashboard
+- `projects/project-04-live-dashboard-system/lib/live_dashboard_system/metrics.ex` - streaming metrics process
+- `projects/project-04-live-dashboard-system/lib/live_dashboard_system_web/live/dashboard_live.ex` - LiveView dashboard and graph sync
+- `projects/project-04-live-dashboard-system/test/live_dashboard_system/metrics_test.exs` - pub/sub metrics tests
+- `projects/project-04-live-dashboard-system/test/live_dashboard_system_web/live/dashboard_live_test.exs` - LiveView sync tests
 
 ## CI
 

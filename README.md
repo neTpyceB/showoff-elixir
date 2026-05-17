@@ -11,6 +11,7 @@ Current:
 - `projects/project-01-cli-task-utility`
 - `projects/project-02-concurrent-web-scraper`
 - `projects/project-03-realtime-chat-server`
+- `projects/project-04-live-dashboard-system`
 
 When creating a new project, existing project folders are not modified unless explicitly requested.
 
@@ -26,6 +27,7 @@ docker compose up -d
 docker compose --profile test run --rm project01_test
 docker compose --profile test run --rm project02_test
 docker compose --profile test run --rm project03_test
+docker compose --profile test run --rm project04_test
 ```
 
 ## CI Rule
@@ -33,7 +35,7 @@ docker compose --profile test run --rm project03_test
 - CI runs natively on GitHub runners.
 - CI triggers on push only.
 - CI runs only for changed project folders.
-- Current configured project CI: `project-01-cli-task-utility`, `project-02-concurrent-web-scraper`, `project-03-realtime-chat-server`.
+- Current configured project CI: `project-01-cli-task-utility`, `project-02-concurrent-web-scraper`, `project-03-realtime-chat-server`, `project-04-live-dashboard-system`.
 
 ## Docs
 
