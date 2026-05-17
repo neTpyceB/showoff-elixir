@@ -37,6 +37,10 @@
 - `projects/project-04-live-dashboard-system/lib/live_dashboard_system_web/live/dashboard_live.ex` - LiveView dashboard and graph sync
 - `projects/project-04-live-dashboard-system/test/live_dashboard_system/metrics_test.exs` - pub/sub metrics tests
 - `projects/project-04-live-dashboard-system/test/live_dashboard_system_web/live/dashboard_live_test.exs` - LiveView sync tests
+- `projects/project-05-fault-tolerant-job-processing-system` - Project 5 OTP job system
+- `projects/project-05-fault-tolerant-job-processing-system/lib/fault_tolerant_job_processing_system/server.ex` - queue/retry/recovery manager
+- `projects/project-05-fault-tolerant-job-processing-system/lib/fault_tolerant_job_processing_system/worker.ex` - pool worker execution
+- `projects/project-05-fault-tolerant-job-processing-system/test/fault_tolerant_job_processing_system_test.exs` - pool/retry/failure tests
 
 ## CI
 

@@ -7,3 +7,5 @@ projects/project-03-realtime-chat-server/_build
 projects/project-03-realtime-chat-server/deps
 projects/project-04-live-dashboard-system/_build
 projects/project-04-live-dashboard-system/deps
+projects/project-05-fault-tolerant-job-processing-system/_build
+projects/project-05-fault-tolerant-job-processing-system/deps

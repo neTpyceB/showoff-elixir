@@ -6,7 +6,8 @@
 2. Project 02: Concurrent Web Scraper
 3. Project 03: Realtime Chat Server
 4. Project 04: Live Dashboard System
-5. Projects 05-10: each in separate `projects/project-XX-*` folder
+5. Project 05: Fault-tolerant Job Processing System
+6. Projects 06-10: each in separate `projects/project-XX-*` folder
 
 ## CI Plan
 

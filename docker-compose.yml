@@ -61,6 +61,19 @@ services:
       mix deps.get &&
       mix phx.server"
 
+  project05:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-05-fault-tolerant-job-processing-system
+    volumes:
+      - ./:/app
+      - project05_deps:/app/projects/project-05-fault-tolerant-job-processing-system/deps
+      - project05_build:/app/projects/project-05-fault-tolerant-job-processing-system/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -117,6 +130,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project05_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-05-fault-tolerant-job-processing-system
+    volumes:
+      - ./:/app
+      - project05_deps:/app/projects/project-05-fault-tolerant-job-processing-system/deps
+      - project05_build:/app/projects/project-05-fault-tolerant-job-processing-system/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -126,3 +153,5 @@ volumes:
   project03_build:
   project04_deps:
   project04_build:
+  project05_deps:
+  project05_build:
