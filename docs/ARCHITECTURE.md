@@ -17,3 +17,4 @@ Monorepo containing 10 independent learning projects.
 - `project-03-realtime-chat-server` (Phoenix websocket app)
 - `project-04-live-dashboard-system` (Phoenix LiveView realtime dashboard)
 - `project-05-fault-tolerant-job-processing-system` (OTP worker pool + retries)
+- `project-06-multiplayer-game-backend` (OTP matchmaking + realtime rooms)

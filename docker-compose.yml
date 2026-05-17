@@ -74,6 +74,19 @@ services:
       mix deps.get &&
       mix test.watch"
 
+  project06:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-06-multiplayer-game-backend
+    volumes:
+      - ./:/app
+      - project06_deps:/app/projects/project-06-multiplayer-game-backend/deps
+      - project06_build:/app/projects/project-06-multiplayer-game-backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -144,6 +157,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project06_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-06-multiplayer-game-backend
+    volumes:
+      - ./:/app
+      - project06_deps:/app/projects/project-06-multiplayer-game-backend/deps
+      - project06_build:/app/projects/project-06-multiplayer-game-backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -155,3 +182,5 @@ volumes:
   project04_build:
   project05_deps:
   project05_build:
+  project06_deps:
+  project06_build:

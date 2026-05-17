@@ -41,6 +41,11 @@
 - `projects/project-05-fault-tolerant-job-processing-system/lib/fault_tolerant_job_processing_system/server.ex` - queue/retry/recovery manager
 - `projects/project-05-fault-tolerant-job-processing-system/lib/fault_tolerant_job_processing_system/worker.ex` - pool worker execution
 - `projects/project-05-fault-tolerant-job-processing-system/test/fault_tolerant_job_processing_system_test.exs` - pool/retry/failure tests
+- `projects/project-06-multiplayer-game-backend` - Project 6 realtime multiplayer backend
+- `projects/project-06-multiplayer-game-backend/lib/multiplayer_game_backend/matchmaker.ex` - player sessions + matchmaking
+- `projects/project-06-multiplayer-game-backend/lib/multiplayer_game_backend/game_room.ex` - game room realtime updates
+- `projects/project-06-multiplayer-game-backend/lib/multiplayer_game_backend/player_session.ex` - player session process
+- `projects/project-06-multiplayer-game-backend/test/multiplayer_game_backend_test.exs` - session/matchmaking/room tests
 
 ## CI
 
