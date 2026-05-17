@@ -10,7 +10,8 @@
 6. Project 06: Multiplayer Game Backend
 7. Project 07: Distributed Notification Platform
 8. Project 08: Event-driven SaaS Backend
-9. Projects 09-10: each in separate `projects/project-XX-*` folder
+9. Project 09: Realtime Collaboration Platform
+10. Project 10: separate `projects/project-10-*` folder
 
 ## CI Plan
 

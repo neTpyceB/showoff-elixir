@@ -16,6 +16,7 @@ Current:
 - `projects/project-06-multiplayer-game-backend`
 - `projects/project-07-distributed-notification-platform`
 - `projects/project-08-event-driven-saas-backend`
+- `projects/project-09-realtime-collaboration-platform`
 
 When creating a new project, existing project folders are not modified unless explicitly requested.
 
@@ -36,6 +37,7 @@ docker compose --profile test run --rm project05_test
 docker compose --profile test run --rm project06_test
 docker compose --profile test run --rm project07_test
 docker compose --profile test run --rm project08_test
+docker compose --profile test run --rm project09_test
 ```
 
 ## CI Rule
@@ -43,7 +45,7 @@ docker compose --profile test run --rm project08_test
 - CI runs natively on GitHub runners.
 - CI triggers on push only.
 - CI runs only for changed project folders.
-- Current configured project CI: `project-01-cli-task-utility`, `project-02-concurrent-web-scraper`, `project-03-realtime-chat-server`, `project-04-live-dashboard-system`, `project-05-fault-tolerant-job-processing-system`, `project-06-multiplayer-game-backend`, `project-07-distributed-notification-platform`, `project-08-event-driven-saas-backend`.
+- Current configured project CI: `project-01-cli-task-utility`, `project-02-concurrent-web-scraper`, `project-03-realtime-chat-server`, `project-04-live-dashboard-system`, `project-05-fault-tolerant-job-processing-system`, `project-06-multiplayer-game-backend`, `project-07-distributed-notification-platform`, `project-08-event-driven-saas-backend`, `project-09-realtime-collaboration-platform`.
 
 ## Docs
 
