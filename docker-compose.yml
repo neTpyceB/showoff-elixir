@@ -113,6 +113,24 @@ services:
       mix deps.get &&
       mix test.watch"
 
+  project09:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-09-realtime-collaboration-platform
+    environment:
+      - PHX_SERVER=true
+      - PORT=4000
+    volumes:
+      - ./:/app
+      - project09_deps:/app/projects/project-09-realtime-collaboration-platform/deps
+      - project09_build:/app/projects/project-09-realtime-collaboration-platform/_build
+    ports:
+      - "4009:4000"
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix phx.server"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -225,6 +243,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project09_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-09-realtime-collaboration-platform
+    volumes:
+      - ./:/app
+      - project09_deps:/app/projects/project-09-realtime-collaboration-platform/deps
+      - project09_build:/app/projects/project-09-realtime-collaboration-platform/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -242,3 +274,5 @@ volumes:
   project07_build:
   project08_deps:
   project08_build:
+  project09_deps:
+  project09_build:

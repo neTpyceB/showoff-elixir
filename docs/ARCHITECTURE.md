@@ -20,3 +20,4 @@ Monorepo containing 10 independent learning projects.
 - `project-06-multiplayer-game-backend` (OTP matchmaking + realtime rooms)
 - `project-07-distributed-notification-platform` (distributed pub/sub + notification retries)
 - `project-08-event-driven-saas-backend` (organizations + RBAC + event streams + audit logs)
+- `project-09-realtime-collaboration-platform` (websocket collaboration + presence + distributed doc state)
