@@ -8,7 +8,8 @@
 4. Project 04: Live Dashboard System
 5. Project 05: Fault-tolerant Job Processing System
 6. Project 06: Multiplayer Game Backend
-7. Projects 07-10: each in separate `projects/project-XX-*` folder
+7. Project 07: Distributed Notification Platform
+8. Projects 08-10: each in separate `projects/project-XX-*` folder
 
 ## CI Plan
 
