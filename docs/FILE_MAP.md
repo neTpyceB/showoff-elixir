@@ -46,6 +46,11 @@
 - `projects/project-06-multiplayer-game-backend/lib/multiplayer_game_backend/game_room.ex` - game room realtime updates
 - `projects/project-06-multiplayer-game-backend/lib/multiplayer_game_backend/player_session.ex` - player session process
 - `projects/project-06-multiplayer-game-backend/test/multiplayer_game_backend_test.exs` - session/matchmaking/room tests
+- `projects/project-07-distributed-notification-platform` - Project 7 distributed notification platform
+- `projects/project-07-distributed-notification-platform/lib/distributed_notification_platform/router.ex` - distributed pub/sub fanout and retry accounting
+- `projects/project-07-distributed-notification-platform/lib/distributed_notification_platform/receiver.ex` - notification endpoint subscriber process
+- `projects/project-07-distributed-notification-platform/lib/distributed_notification_platform/delivery_worker.ex` - retrying delivery worker process
+- `projects/project-07-distributed-notification-platform/test/distributed_notification_platform_test.exs` - pub/sub delivery and retry tests
 
 ## CI
 

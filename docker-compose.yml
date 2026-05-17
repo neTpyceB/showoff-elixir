@@ -87,6 +87,19 @@ services:
       mix deps.get &&
       mix test.watch"
 
+  project07:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-07-distributed-notification-platform
+    volumes:
+      - ./:/app
+      - project07_deps:/app/projects/project-07-distributed-notification-platform/deps
+      - project07_build:/app/projects/project-07-distributed-notification-platform/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -171,6 +184,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project07_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-07-distributed-notification-platform
+    volumes:
+      - ./:/app
+      - project07_deps:/app/projects/project-07-distributed-notification-platform/deps
+      - project07_build:/app/projects/project-07-distributed-notification-platform/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -184,3 +211,5 @@ volumes:
   project05_build:
   project06_deps:
   project06_build:
+  project07_deps:
+  project07_build:
