@@ -19,3 +19,4 @@ Monorepo containing 10 independent learning projects.
 - `project-05-fault-tolerant-job-processing-system` (OTP worker pool + retries)
 - `project-06-multiplayer-game-backend` (OTP matchmaking + realtime rooms)
 - `project-07-distributed-notification-platform` (distributed pub/sub + notification retries)
+- `project-08-event-driven-saas-backend` (organizations + RBAC + event streams + audit logs)

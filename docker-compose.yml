@@ -100,6 +100,19 @@ services:
       mix deps.get &&
       mix test.watch"
 
+  project08:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-08-event-driven-saas-backend
+    volumes:
+      - ./:/app
+      - project08_deps:/app/projects/project-08-event-driven-saas-backend/deps
+      - project08_build:/app/projects/project-08-event-driven-saas-backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -198,6 +211,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project08_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-08-event-driven-saas-backend
+    volumes:
+      - ./:/app
+      - project08_deps:/app/projects/project-08-event-driven-saas-backend/deps
+      - project08_build:/app/projects/project-08-event-driven-saas-backend/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -213,3 +240,5 @@ volumes:
   project06_build:
   project07_deps:
   project07_build:
+  project08_deps:
+  project08_build:

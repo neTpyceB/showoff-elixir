@@ -51,6 +51,10 @@
 - `projects/project-07-distributed-notification-platform/lib/distributed_notification_platform/receiver.ex` - notification endpoint subscriber process
 - `projects/project-07-distributed-notification-platform/lib/distributed_notification_platform/delivery_worker.ex` - retrying delivery worker process
 - `projects/project-07-distributed-notification-platform/test/distributed_notification_platform_test.exs` - pub/sub delivery and retry tests
+- `projects/project-08-event-driven-saas-backend` - Project 8 event-driven SaaS backend
+- `projects/project-08-event-driven-saas-backend/lib/event_driven_saas_backend/platform.ex` - organizations/RBAC/event/audit state and logic
+- `projects/project-08-event-driven-saas-backend/lib/event_driven_saas_backend.ex` - public API
+- `projects/project-08-event-driven-saas-backend/test/event_driven_saas_backend_test.exs` - RBAC/event stream/audit tests
 
 ## CI
 
