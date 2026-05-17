@@ -11,7 +11,7 @@
 7. Project 07: Distributed Notification Platform
 8. Project 08: Event-driven SaaS Backend
 9. Project 09: Realtime Collaboration Platform
-10. Project 10: separate `projects/project-10-*` folder
+10. Project 10: World-scale Distributed Platform
 
 ## CI Plan
 

@@ -131,6 +131,19 @@ services:
       mix deps.get &&
       mix phx.server"
 
+  project10:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-10-world-scale-distributed-platform
+    volumes:
+      - ./:/app
+      - project10_deps:/app/projects/project-10-world-scale-distributed-platform/deps
+      - project10_build:/app/projects/project-10-world-scale-distributed-platform/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test.watch"
+
   project01_test:
     image: elixir:1.19.5
     working_dir: /app/projects/project-01-cli-task-utility
@@ -257,6 +270,20 @@ services:
       mix test"
     profiles: ["test"]
 
+  project10_test:
+    image: elixir:1.19.5
+    working_dir: /app/projects/project-10-world-scale-distributed-platform
+    volumes:
+      - ./:/app
+      - project10_deps:/app/projects/project-10-world-scale-distributed-platform/deps
+      - project10_build:/app/projects/project-10-world-scale-distributed-platform/_build
+    command: >
+      sh -lc "mix local.hex --force &&
+      mix local.rebar --force &&
+      mix deps.get &&
+      mix test"
+    profiles: ["test"]
+
 volumes:
   project01_deps:
   project01_build:
@@ -276,3 +303,5 @@ volumes:
   project08_build:
   project09_deps:
   project09_build:
+  project10_deps:
+  project10_build:
