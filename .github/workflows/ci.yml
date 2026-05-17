@@ -14,6 +14,7 @@ jobs:
       project01: ${{ steps.filter.outputs.project01 }}
       project02: ${{ steps.filter.outputs.project02 }}
       project03: ${{ steps.filter.outputs.project03 }}
+      project04: ${{ steps.filter.outputs.project04 }}
     steps:
       - uses: actions/checkout@v5
       - id: filter
@@ -26,6 +27,8 @@ jobs:
               - 'projects/project-02-concurrent-web-scraper/**'
             project03:
               - 'projects/project-03-realtime-chat-server/**'
+            project04:
+              - 'projects/project-04-live-dashboard-system/**'
 
   project01:
     runs-on: ubuntu-latest
@@ -75,6 +78,24 @@ jobs:
           elixir-version: "1.19.5"
       - name: Project 03 tests
         working-directory: projects/project-03-realtime-chat-server
+        run: |
+          mix local.hex --force
+          mix local.rebar --force
+          mix deps.get
+          mix test
+
+  project04:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: needs.changes.outputs.project04 == 'true'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "28"
+          elixir-version: "1.19.5"
+      - name: Project 04 tests
+        working-directory: projects/project-04-live-dashboard-system
         run: |
           mix local.hex --force
           mix local.rebar --force
