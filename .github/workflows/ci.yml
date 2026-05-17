@@ -20,6 +20,7 @@ jobs:
       project07: ${{ steps.filter.outputs.project07 }}
       project08: ${{ steps.filter.outputs.project08 }}
       project09: ${{ steps.filter.outputs.project09 }}
+      project10: ${{ steps.filter.outputs.project10 }}
     steps:
       - uses: actions/checkout@v5
       - id: filter
@@ -44,6 +45,8 @@ jobs:
               - 'projects/project-08-event-driven-saas-backend/**'
             project09:
               - 'projects/project-09-realtime-collaboration-platform/**'
+            project10:
+              - 'projects/project-10-world-scale-distributed-platform/**'
 
   project01:
     runs-on: ubuntu-latest
@@ -201,6 +204,24 @@ jobs:
           elixir-version: "1.19.5"
       - name: Project 09 tests
         working-directory: projects/project-09-realtime-collaboration-platform
+        run: |
+          mix local.hex --force
+          mix local.rebar --force
+          mix deps.get
+          mix test
+
+  project10:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: needs.changes.outputs.project10 == 'true'
+    steps:
+      - uses: actions/checkout@v5
+      - uses: erlef/setup-beam@v1
+        with:
+          otp-version: "28"
+          elixir-version: "1.19.5"
+      - name: Project 10 tests
+        working-directory: projects/project-10-world-scale-distributed-platform
         run: |
           mix local.hex --force
           mix local.rebar --force

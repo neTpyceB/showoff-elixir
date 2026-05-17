@@ -60,6 +60,10 @@
 - `projects/project-09-realtime-collaboration-platform/lib/realtime_collaboration_platform_web/channels/collab_channel.ex` - collaborative editing websocket channel
 - `projects/project-09-realtime-collaboration-platform/lib/realtime_collaboration_platform_web/presence.ex` - live collaborator presence tracking
 - `projects/project-09-realtime-collaboration-platform/test/realtime_collaboration_platform_web/channels/collab_channel_test.exs` - realtime edit/sync/presence tests
+- `projects/project-10-world-scale-distributed-platform` - Project 10 world-scale distributed platform
+- `projects/project-10-world-scale-distributed-platform/lib/world_scale_distributed_platform/platform.ex` - cluster coordination, distributed messaging/events, resilience control
+- `projects/project-10-world-scale-distributed-platform/lib/world_scale_distributed_platform/gateway.ex` - fault-tolerant gateway shard worker
+- `projects/project-10-world-scale-distributed-platform/test/world_scale_distributed_platform_test.exs` - scale simulation, pub/sub, resilience, self-healing tests
 
 ## CI
 
