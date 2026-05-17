@@ -9,7 +9,8 @@
 5. Project 05: Fault-tolerant Job Processing System
 6. Project 06: Multiplayer Game Backend
 7. Project 07: Distributed Notification Platform
-8. Projects 08-10: each in separate `projects/project-XX-*` folder
+8. Project 08: Event-driven SaaS Backend
+9. Projects 09-10: each in separate `projects/project-XX-*` folder
 
 ## CI Plan
 
